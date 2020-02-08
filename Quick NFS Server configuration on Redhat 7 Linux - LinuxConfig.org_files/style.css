@@ -1,0 +1,181 @@
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    -o-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    background: #e1e1e1;
+}
+
+.banner {
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid;
+    background: #006496;
+    display: block !important;
+    overflow: hidden;
+}
+
+.hide {
+    opacity: 0;
+}
+
+.retina {
+    background-size: contain !important;
+}
+
+#clicktag {
+    cursor: pointer;
+    background: url('clicktag.png');
+}
+
+#cisco_Logo {
+    width: 154px;
+    height: 65px;
+    background: url('cisco_logo.svg');
+    bottom: 39px;
+}
+
+#bg1 {}
+
+#bgSky {
+    left: -150px;
+    width: 450px;
+    height: 600px;
+    background: url('bgSky.jpg');
+}
+
+#bgRobot {
+    -webkit-transform-origin: 250px 580px;
+    -ms-transform-origin: 250px 580px;
+    -o-transform-origin: 250px 580px;
+    transform-origin: 250px 580px;
+}
+
+
+#bg2 {}
+
+#bgDark {
+    background: url('bgDark.jpg');
+}
+
+#bgGirl {
+    -webkit-transform-origin: 250px 450px;
+    -ms-transform-origin: 250px 450px;
+    -o-transform-origin: 250px 450px;
+    transform-origin: 250px 450px;
+}
+
+#bg3 {}
+
+#bgGamer {
+    background: url('bgGamer.jpg');
+    -webkit-transform-origin: 145px 550px;
+    -ms-transform-origin: 145px 550px;
+    -o-transform-origin: 145px 550px;
+    transform-origin: 145px 550px;
+}
+
+#bgMan {
+    -webkit-transform-origin: 145px 550px;
+    -ms-transform-origin: 145px 550px;
+    -o-transform-origin: 145px 550px;
+    transform-origin: 145px 550px;
+}
+
+#bgEF {
+    top: -250px;
+    width: 300px;
+    height: 850px;
+    background: #006496 url('bgEF.jpg');
+}
+
+#copy1 {
+    top: 50px;
+    left: 31px;
+    width: 221px;
+    height: 70px;
+    background: url('copy1.svg');
+}
+
+#copy2 {
+    top: 50px;
+    left: 30px;
+    width: 247px;
+    height: 71px;
+    background: url('copy2.svg');
+}
+
+#copy3 {
+    top: 50px;
+    left: 30px;
+    width: 221px;
+    height: 70px;
+    background: url('copy3.svg');
+}
+
+#copy4 {
+    top: 74px;
+    left: 32px;
+    width: 211px;
+    height: 129px;
+    background: url('copy4.svg');
+}
+
+#copy4Mask {
+    top: 163px;
+    left: 35px;
+    width: 126px;
+    height: 47px;
+    overflow: hidden;
+}
+
+#copy4_1 {
+    top: 0px;
+    left: 0px;
+    width: 126px;
+    height: 47px;
+    background: url('copy4_1.svg');
+}
+
+#copy4_2 {
+    top: 0px;
+    left: 0px;
+    width: 126px;
+    height: 47px;
+    background: url('copy4_2.svg');
+}
+
+#copy4_3 {
+    top: 0px;
+    left: 0px;
+    width: 126px;
+    height: 47px;
+    background: url('copy4_3.svg');
+}
+
+#copy4_4 {
+    top: 0px;
+    left: 0px;
+    width: 126px;
+    height: 47px;
+    background: url('copy4_4.svg');
+}
+
+#copy5 {
+    top: 226px;
+    left: 33px;
+    width: 175px;
+    height: 83px;
+    background: url('copy5.svg');
+}
+
+#cta {
+    top: 412px;
+    width: 145px;
+    height: 50px;
+    background: url('cta.svg');
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+}

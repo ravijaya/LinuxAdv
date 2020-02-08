@@ -1,0 +1,10 @@
+to Give remote access.
+
+server.conf
+[mariadb]
+bind-address=ipaddr
+
+CREATE DATABASE foo;
+GRANT ALL ON foo.* TO peter@'202.54.10.20' IDENTIFIED BY 'peter';
+
+

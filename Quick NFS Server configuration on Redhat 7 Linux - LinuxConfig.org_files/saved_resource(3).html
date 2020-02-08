@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!-- saved from url=(0072)https://linuxconfig.org/quick-nfs-server-configuration-on-redhat-7-linux -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script>var inDapIF=true,inGptIF=true;</script></head><body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0"><script>window.dicnf = {};</script><script data-jc="42">(function(){/*  Copyright The Closure Library Authors. SPDX-License-Identifier: Apache-2.0 */ 'use strict';window.viewReq=[];const c=a=>{fetch(a,{keepalive:!0,credentials:"include",redirect:"follow",method:"get",mode:"no-cors"}).catch(()=>{{const b=new Image;b.src=a.replace("&amp;","&");viewReq.push(b)}})};window.vu=a=>{if(window.fetch)c(a);else{{const b=new Image;b.src=a.replace("&amp;","&");viewReq.push(b)}}};}).call(this);</script><script>vu("https://securepubads.g.doubleclick.net/pcs/view?xai\x3dAKAOjsvjlcNF63coAZQK_XqAkYhYSH3sPftX_TUhrkpkSuR1iTGK26Ti11DSLyWRSMPSSyHPb0Q2ir-lUr7weid1Nic9KAy64JciJ9XqM3iMVVX3n1NJyOu4A-sjkvmnpE-Eg5mDuIsifcnRQN0kujFTrZomtTumn3NhFFQW6G_m3r9YX9X5zWHEca7Wo290WQv00NfOoy9t8Jm4RklyDWeRRAhe1AV3Vg9wH1R3fXQ8cejcnIA05SMhGZfJxtVdIno18zWddjlI28CxH4uF43WgyFDlAw\x26sai\x3dAMfl-YT_tKQw3j5cLIW1CeygqlBNLm_Xv6QEe6tiCGqKMUXprfil46-2IPLaGGbyC-b8HuUREv1JKYyUKwEWBeluiAEarONzPUSr8aJel2N_oMZbn7I2xcKfhtGQHg-9Dg3CrNM5uQ\x26sig\x3dCg0ArKJSzF3kcf-EiP3SEAE\x26urlfix\x3d1\x26adurl\x3d")</script><div class="GoogleActiveViewInnerContainer" style="left:0px;top:0px;width:100%;height:100%;position:fixed;pointer-events:none;z-index:-9999;"></div><div style="display:inline" class="GoogleActiveViewElement" data-google-av-cxn="https://pagead2.googlesyndication.com/pcs/activeview?xai=AKAOjsvimQJXUPRQjEY7rTeBnomXStsgxwjLJZVlzsxn7JNZ8fqjeM9k_OTFh5FsjTQI78nFiaTfhEf9I8EnHzINJhP9kcZcVpiEIWcIf9Xz6Qs&amp;sig=Cg0ArKJSzKkKP9B5bMLVEAE" data-google-av-adk="1831249359" data-google-av-metadata="la=0&amp;xdi=0&amp;" data-google-av-override="-1" data-google-av-dm="2" data-google-av-immediate="" data-google-av-aid="0" data-google-av-naid="1" data-google-av-slift="" data-google-av-cpmav="" data-google-av-itpl="19" data-google-av-rs="4"><script>
+var amzn_win=window,amzn_c=5,amzn_x=0;while(amzn_x<amzn_c){amzn_win=amzn_win.parent;if(amzn_win.apstag)try{amzn_win.apstag.renderImp(document,"Im0U_VUHJ6Lekb5rxx99OSwAAAFwE2tVhQUAAA2xASSOJv0");amzn_x=amzn_c}catch(e){}amzn_x++};
+</script>
+
+<script>
+  try {
+    var amznbid = amzn_win.YLHH.bidder.amazon.bids["Im0U_VUHJ6Lekb5rxx99OSwAAAFwE2tVhQUAAA2xASSOJv0"]
+    var size = amznbid.size.split('x')
+    var bid = { bidderCode: 'A9', width: size[0], height: size[1], amznbid: amznbid };
+
+    var i = 0;
+    var w = window;
+    for (i = 0; i < 10; i++) {
+      w = w.parent;
+      if (w.YLHH) break;
+      try {
+        w.postMessage(JSON.stringify({ event: 'YieldloveBidWon', bid: bid }), '*');
+      } catch (e) {
+        console.error(e)
+      }
+    }
+  } catch (e) {
+    console.error(e);  
+  }
+</script></div><script src="./osd_listener.js"></script><script type="text/javascript">osdlfm(-1,'','Bsuq9Jjg6XvGjLNLJoAPEmqrQDwAAAAAQATgByAEJwAIC4AIA4AQBoAYWiAcB0ggECAAQAg','',1831249359,true,'la\x3d0\x26xdi\x3d0\x26',3,'','https://pagead2.googlesyndication.com/pcs/activeview?xai\x3dAKAOjsvimQJXUPRQjEY7rTeBnomXStsgxwjLJZVlzsxn7JNZ8fqjeM9k_OTFh5FsjTQI78nFiaTfhEf9I8EnHzINJhP9kcZcVpiEIWcIf9Xz6Qs\x26sig\x3dCg0ArKJSzKkKP9B5bMLVEAE','');</script><div style="bottom:0;right:0;width:160px;height:600px;background:initial !important;position:absolute !important;max-width:100% !important;max-height:100% !important;pointer-events:none !important;image-rendering:pixelated !important;z-index:2147483647;background-image:url(&#39;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAAWBAMAAACrl3iAAAAABlBMVEUAAAD+AciWmZzWAAAAAnRSTlMAApidrBQAAAB8SURBVBjTbZELDoAwDELpDbj/aU1/DKfd4mxG8FGB/4ouRL6rA1i3HNV2pUCtgLq8IVnPlG4nddxq95S3SOJFomK6OjdgLOvdCOXbZ0KVZjYs8VhyZBy1UQP6hIFAMWmkx9fzmRw2hRF+JjgcHfXMe37Q5b3OvTXB2KhZDyfvBbOKGYdlAAAAAElFTkSuQmCC&#39;) !important;"></div><iframe frameborder="0" marginheight="0" marginwidth="0" scrolling="no" width="728px" height="90px" id="amznad342639" sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" src="./admi.html"></iframe><script type="text/javascript" async="" src="./csm_others.js"></script></body></html>
